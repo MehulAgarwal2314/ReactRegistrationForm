@@ -9,19 +9,6 @@ function Title(){
   );
 }
 
-// function RegisteredMessage(isShown,setIsShown,handleClick){
-//   return(
-//     <>
-//     {isShown && (
-//       <div>
-//         <h2>Some content here</h2>
-//       </div>
-//     )}
-//     </>
-
-//   );
-// }
-
 function Placeholders({Name,Email,Password,onNameChange,onEmailChange,onPasswordChange}) {
   return (
     <>
@@ -68,7 +55,7 @@ function PlaceholdersButton() {
     event.preventDefault();
     
     
-    if (!isValidEmail(Email)) {
+    if (Email.trim().length !== 0 && !isValidEmail(Email)) {
       alert('The Email is Invalid');
     } 
     
